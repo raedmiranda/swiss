@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+  <div class="row">
+    <input type="text" placeholder="Nombre" formControlName="name" />
+  </div>
+  <div class="row">
+    <input type="text" placeholder="Apellidos" formControlName="lastname" />
+  </div>
+  <div class="row">
+    <input type="number" placeholder="DNI" formControlName="id" />
+  </div>
+  <div class="row">
+    <input type="phone" placeholder="Celular" formControlName="phone" />
+  </div>
+  <div class="row">
+    <input type="email" placeholder="Correo" formControlName="email" />
+  </div>
+  <div class="row">
+    <input type="checkbox" formControlName="accept" />
+    <label for="accept">Acepta los términos</label>
+  </div>
+  <button (click)="clear()">Cancelar</button>
+  <button (click)="confirm()">Aceptar</button>
+</form>
+
+<app-table [data]="arrData"></app-table>

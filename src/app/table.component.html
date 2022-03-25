@@ -1,0 +1,29 @@
+{{ lista | json }}
+
+<table>
+  <thead>
+    <th>NOMBRE</th>
+    <th>APELLIDOS</th>
+    <th>DNI</th>
+    <th>CELULAR</th>
+    <th>CORREO</th>
+    <th>TERM CONDI</th>
+    <th>OPCIONES</th>
+  </thead>
+  <tbody>
+    <!-- <div *ngIf="this.data.length > 0"> -->
+    <tr *ngFor="let item of lista">
+      <td>{{ item.name }}</td>
+      <td>{{ item.lastname }}</td>
+      <td>{{ item.id }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.accept }}</td>
+      <td>
+        <button (click)="delete(item)">ELIMINAR</button>
+        <button (click)="edit(item)">EDITAR</button>
+      </td>
+    </tr>
+    <!-- </div> -->
+  </tbody>
+</table>
